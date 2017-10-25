@@ -21,6 +21,6 @@ public class Professeur extends Personne {
    }
    
    public String horaire(){
-      return "lol mdr tu crois que j'ai créé ca ?";
+      return "lol xD mdr tu crois que j'ai créé ca ?";
    }
 }
