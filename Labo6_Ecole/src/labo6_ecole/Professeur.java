@@ -10,7 +10,7 @@ package labo6_ecole;
  * @author James
  */
 public class Professeur extends Personne {
-   String abreviation;
+   private String abreviation;
    Professeur(String nom, String prenom, String abreviation){
       super(nom,prenom);
       this.abreviation = abreviation;

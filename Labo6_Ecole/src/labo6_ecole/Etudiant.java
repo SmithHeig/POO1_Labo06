@@ -10,7 +10,7 @@ package labo6_ecole;
  * @author James
  */
 public class Etudiant extends Personne {
-   int matricule;
+   private int matricule;
    
    Etudiant(String nom, String prenom, int matricule){
       super(nom,prenom);

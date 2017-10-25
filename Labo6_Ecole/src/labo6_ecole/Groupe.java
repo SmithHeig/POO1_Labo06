@@ -13,6 +13,7 @@ public class Groupe {
    private int numero;
    private String orientation;
    private int trimestre;
+   private Etudiant[] etudiants;
    
    Groupe(int numero, String orientation, int trimestre){
        this.numero = numero;

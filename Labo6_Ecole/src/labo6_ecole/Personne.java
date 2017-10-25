@@ -11,8 +11,8 @@ package labo6_ecole;
  * @author James
  */
 public class Personne {
-   String nom;
-   String prenom;
+   private String nom;
+   private String prenom;
    Personne(String nom, String prenom){
       this.nom = nom;
       this.prenom = prenom;
