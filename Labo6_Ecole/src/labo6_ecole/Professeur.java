@@ -9,6 +9,18 @@ package labo6_ecole;
  *
  * @author James
  */
-public class Professeur {
+public class Professeur extends Personne {
+   String abreviation;
+   Professeur(String nom, String prenom, String abreviation){
+      super(nom,prenom);
+      this.abreviation = abreviation;
+   }
    
+   public String toString(){
+      return super.toString() + " (" + abreviation + ")";
+   }
+   
+   public String horaire(){
+      return "lol mdr tu crois que j'ai créé ca ?";
+   }
 }
