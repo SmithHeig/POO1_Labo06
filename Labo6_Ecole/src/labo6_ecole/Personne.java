@@ -10,5 +10,14 @@ package labo6_ecole;
  * @author James
  */
 public class Personne {
+   String nom;
+   String prenom;
+   Personne(String nom, String prenom){
+      this.nom = nom;
+      this.prenom = prenom;
+   }
    
+   public String toString(){
+      return nom + " " + prenom;
+   }
 }
