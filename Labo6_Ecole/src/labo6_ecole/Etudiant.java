@@ -10,14 +10,15 @@ package labo6_ecole;
  * @author James
  */
 public class Etudiant extends Personne {
-   private int matricule;
-   
-   Etudiant(String nom, String prenom, int matricule){
-      super(nom,prenom);
-      this.matricule = matricule;
-   }
-   
-   public String toString(){
-      return super.toString() + " " + matricule;
-   }
+
+    private int matricule;
+
+    Etudiant(String nom, String prenom, int matricule) {
+        super(nom, prenom);
+        this.matricule = matricule;
+    }
+
+    public String toString() {
+        return super.toString() + " " + matricule;
+    }
 }
