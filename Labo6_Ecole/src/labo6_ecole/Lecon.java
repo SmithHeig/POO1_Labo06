@@ -18,12 +18,29 @@ public class Lecon {
     private String salle;
     private Professeur professeur;
 
-    Lecon(String matiere, int jourSemaine, int periodeDebut, int duree, String salle) {
+    Lecon(String matiere, int jourSemaine, int periodeDebut, int duree, String salle, Professeur professeur) {
         this.matiere = matiere;
         this.jourSemaine = jourSemaine;
         this.periodeDebut = periodeDebut;
         this.duree = duree;
         this.salle = salle;
+        this.professeur = professeur;
+    }
+    
+    Lecon(String matiere, int jourSemaine, int periodeDebut, int duree, String salle){
+        this(matiere,jourSemaine,periodeDebut,duree,salle,null);
+    }
+    
+    public int getJourSemaine(){
+        return jourSemaine;
+    }
+    
+    public int getPeriodeDebut(){
+        return periodeDebut;
+    }
+    
+    public int getDuree(){
+        return duree;
     }
 
     String horaire() {

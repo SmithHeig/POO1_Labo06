@@ -28,6 +28,10 @@ public class Groupe {
     }
 
     public String horaire() {
+        Horaire horaireGroupe = new Horaire(lecons);
+        System.out.println("-- Horraire du groupe " + nom() + " (" + nombreEtudiants() + " etudiants)");   
+        System.out.println(horaireGroupe);
+            
         return null;
     }
 
