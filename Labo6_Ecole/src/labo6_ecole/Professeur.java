@@ -13,9 +13,9 @@ public class Professeur extends Personne {
 
     private String abreviation;
 
-    Professeur(String nom, String prenom, String abreviation) {
+    Professeur(String nom, String prenom) {
         super(nom, prenom);
-        this.abreviation = abreviation;
+        //this.abreviation = abreviation; // A calculer et non passé en paramètre
     }
 
     public String toString() {

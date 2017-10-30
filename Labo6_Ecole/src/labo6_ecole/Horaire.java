@@ -17,9 +17,9 @@ public class Horaire {
     }
     
     public String toString(){
-        int noLecon = 0;
         final int NB_LECON_JOUR = 11;
         final int NB_JOUR = 5;
+        String print = "";
         int[][] formatHoraire = new int[NB_JOUR][NB_LECON_JOUR];
         //Mise sous forme de tableau à 2D
         for(int i = 0; i < lecons.length; ++i){
@@ -34,29 +34,29 @@ public class Horaire {
         
         
         //Affichage
-        System.out.println("     |Lun          |Mar          |Mer          |Jeu          |Ven          |");
+        print += "     |Lun          |Mar          |Mer          |Jeu          |Ven          |\n";
         for(int i = 0; i < NB_LECON_JOUR; ++i){
-            System.out.println("     ");
-            System.out.println(printPeriode(i));
+            print += "     ";
+            print += printPeriode(i);
             for(int j = 0; j < NB_JOUR; ++j){
                 if(formatHoraire[i][j] > 0){
-                    
-                    System.out.println("|-------------|");
-                    System.out.println("|" + lecons[noLecon++].toString()+"|");
+                    print += "|-------------|\n";
+                    print += "|" + lecons[formatHoraire[i][j]].toString()+"|\n";
                 } else{
                     if(formatHoraire[i][j] == 0){
-                        System.out.println("|-------------|");
+                        print += "|-------------|\n";
                     } else {
-                        System.out.println("|             |");
+                        print += "|             |\n";
                     }
-                    System.out.println("|             |");
+                    print += "|             |\n";
                 }
             }
         }
+        print += "     |-------------|-------------|-------------|-------------|-------------|";
         return null;
     }
     
-    private void sort(){
+    /*private void sort(){
         Lecon temp;
         for(int i = 0 ; i < lecons.length; ++i){
             for(int j = 0; j < lecons.length - i; ++j){
@@ -69,7 +69,7 @@ public class Horaire {
                 }
             }
         }
-    }
+    }*/
     
     private String printPeriode(int periode){
         switch(periode){
