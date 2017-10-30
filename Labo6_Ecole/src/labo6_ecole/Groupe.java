@@ -10,29 +10,43 @@ package labo6_ecole;
  * @author Adrien Allemand
  */
 public class Groupe {
-   private int numero;
-   private String orientation;
-   private int trimestre;
-   
-   Groupe(int numero, String orientation, int trimestre){
-       this.numero = numero;
-       this.orientation = orientation;
-       this.trimestre = trimestre;
-   }
-   
-   public String horaire(){
-       return null;
-   }
-   
-   public String nom(){
-       return null;
-   }
-   
-   public int nombreEtudiants(){
-       return 0;
-   }
-   
-   public void definirLecon(){
-       
-   }
+
+    private int numero;
+    private String orientation;
+    private int trimestre;
+    private Etudiant[] etudiants;
+    private Lecon[] lecons;
+
+    Groupe(int numero, String orientation, int trimestre, Etudiant... etudiants) {
+        if (etudiants.length == 0) {
+            throw new RuntimeException("You shall not pass... Any student!");
+        }
+        this.numero = numero;
+        this.orientation = orientation;
+        this.trimestre = trimestre;
+        this.etudiants = etudiants;
+    }
+
+    public String horaire() {
+        Horaire horaireGroupe = new Horaire(lecons);
+        System.out.println("-- Horraire du groupe " + nom() + " (" + nombreEtudiants() + " etudiants)");   
+        System.out.println(horaireGroupe);
+            
+        return null;
+    }
+
+    public String nom() {
+        return orientation + trimestre + "-" + numero;
+    }
+
+    public int nombreEtudiants() {
+        return etudiants.length;
+    }
+
+    public void definirLecon(Lecon... lecons) {
+        if (lecons.length == 0) {
+            throw new RuntimeException("You shall not pass... Any lecons!");
+        }
+        this.lecons = lecons; //FAUX manque plein de test
+    }
 }
