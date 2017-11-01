@@ -30,7 +30,16 @@ public class Labo6_Ecole {
         
         /* Etudiant */
         Etudiant JohnLenon = new Etudiant("Lenon", "John", 1234);
-        /** to continue **/
+        Etudiant PaulMcCartney = new Etudiant("McCartney", "Paul", 1235);
+        Etudiant RingStarr = new Etudiant("Starr", "Ringo", 1236);
+        Etudiant GeorgeHarisson = new Etudiant("Harisson", "George", 1237);
+        Etudiant RogerWaters = new Etudiant("Waters", "Rogers", 1237);
+        Etudiant DavidGilmour = new Etudiant("Gilmour", "David", 1237);
+        
+        Groupe IL61 = new Groupe(6, "IL",1 ,JohnLenon, PaulMcCartney, RingStarr, GeorgeHarisson);
+        Groupe TS61 = new Groupe(2, "RS",1 , RogerWaters, DavidGilmour);
+        
+        
         
     }
 
